@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">start subscribe kotlin</string>
+    <string name="tips">Atur jadwal langganan dengan menekan tanggal pada kalender. Selesaikan transaksi sebelum pukul 19:00 untuk mulai pengiriman besok.</string>
+</resources>

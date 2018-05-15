@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_white"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/action_bar_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.xyz.step.FlowViewHorizontal
+                android:id="@+id/stepview"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@android:color/white"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                app:h_bg_color="@color/grey"
+                app:h_bg_radius="10dp"
+                app:h_bg_width='2dp'
+                app:h_pro_color="@color/orange"
+                app:h_pro_radius='10dp'
+                app:h_pro_width="2dp"
+                app:h_text_padding="16dp"
+                app:h_textsize="14sp"
+                app:h_time_padding='25dp' />
+
+            <include
+                android:id="@+id/main_content"
+                layout="@layout/main_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/stepview" />
+
+            <include
+                android:id="@+id/detail_order_content"
+                layout="@layout/detail_order_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_content" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:id="@+id/btnSubmit"
+                android:text="Selanjutnya"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/orange_button_bg"
+                android:layout_margin="@dimen/padding_normal"
+                android:layout_below="@+id/detail_order_content"
+                android:layout_height="50dp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
